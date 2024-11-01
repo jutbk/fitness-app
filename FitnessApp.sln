@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessApp.Server", "FitnessApp.Server\FitnessApp.Server.csproj", "{22001797-D694-4509-ADC9-68B2778A986B}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "fitnessapp.client", "fitnessapp.client\fitnessapp.client.esproj", "{AB7E9064-7625-4D3C-B47A-1B1C5D1DA6E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22001797-D694-4509-ADC9-68B2778A986B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22001797-D694-4509-ADC9-68B2778A986B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22001797-D694-4509-ADC9-68B2778A986B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22001797-D694-4509-ADC9-68B2778A986B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB7E9064-7625-4D3C-B47A-1B1C5D1DA6E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7E9064-7625-4D3C-B47A-1B1C5D1DA6E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7E9064-7625-4D3C-B47A-1B1C5D1DA6E2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AB7E9064-7625-4D3C-B47A-1B1C5D1DA6E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7E9064-7625-4D3C-B47A-1B1C5D1DA6E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB7E9064-7625-4D3C-B47A-1B1C5D1DA6E2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {281D78D4-5757-4CAD-864D-9F5A5C4979E5}
+	EndGlobalSection
+EndGlobal
