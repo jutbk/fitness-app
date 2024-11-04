@@ -1,16 +1,16 @@
 ﻿using FitnessApp.Server.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FitnessApp.Server.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
 
-        // Définissez vos DbSet ici. Par exemple :
         public DbSet<Abonnement> Abonnements { get; set; }
         public DbSet<Coach> Coaches { get; set; }
         public DbSet<Cours> Cours { get; set; }
@@ -23,6 +23,8 @@ namespace FitnessApp.Server.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Abonnement>(entity =>
             {
                 entity.ToTable("Abonnement");

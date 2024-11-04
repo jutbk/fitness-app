@@ -1,20 +1,22 @@
 // File: fitnessapp.client/src/App.jsx
 import React from 'react';
-import Header from './components/Header';
-import MembreList from './components/MembreList';
-import AbonnementList from './components/AbonnementList';
-import Footer from './components/Footer';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Login from './components/Login';
+import Register from './components/Register';
 
-const App = () => {
+function App() {
     return (
-        <div id="root">
-            <Header />
-            <MembreList />
-            <AbonnementList />
-            <Footer />
-        </div>
+        <Router>
+            <div>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                </Routes>
+            </div>
+        </Router>
     );
-};
+}
 
 export default App;

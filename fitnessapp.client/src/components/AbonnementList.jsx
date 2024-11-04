@@ -1,13 +1,15 @@
-// File: fitnessapp.client/src/components/AbonnementList.js
-import React from 'react';
-
-const abonnements = [
-    { id: 1, type: 'Mensuel', price: '30€' },
-    { id: 2, type: 'Trimestriel', price: '80€' },
-    { id: 3, type: 'Annuel', price: '300€' }
-];
+import React, { useEffect, useState } from 'react';
 
 const AbonnementList = () => {
+    const [abonnements, setAbonnements] = useState([]);
+
+    useEffect(() => {
+        fetch('/api/abonnements')
+            .then(response => response.json())
+            .then(data => setAbonnements(data))
+            .catch(error => console.error('Erreur:', error));
+    }, []);
+
     return (
         <div>
             <h2>Abonnements</h2>

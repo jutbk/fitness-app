@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace FitnessApp.Server.Models;
 
-public class Membre
+public partial class Membre
 {
     public int MembreId { get; set; }
     public string MembreFirstname { get; set; } = null!;
@@ -14,6 +14,7 @@ public class Membre
     public DateTime CreatedAt { get; set; }
     public int? AbonnementId { get; set; }
     public virtual Abonnement? Abonnement { get; set; }
-    public virtual ICollection<Paiement> Paiements { get; set; } = new List<Paiement>();
     public virtual ICollection<Reservation> Reservations { get; set; } = new List<Reservation>();
+    public virtual ICollection<Paiement> Paiements { get; set; } = new List<Paiement>();
 }
+
